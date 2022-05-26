@@ -1,0 +1,125 @@
+.heading1 {
+  font-family: "Montserrat";
+  font-size: 48px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0px 0px 3px #000000;
+  display: grid;
+  justify-content: center;
+}
+
+body {
+  background: linear-gradient(45deg, #1f2457, #1e3361, black 100%);
+  height: 90vh;
+}
+
+.btn {
+  background: linear-gradient(#000000, #000000) padding-box, linear-gradient(to right, #520d8c, #ff3b61) border-box;
+  border: solid 1.6px transparent;
+  color: white;
+  padding: 15px 25px;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+main {
+  margin-top: 150px;
+  display: grid;
+  place-items: center;
+  row-gap: 40px;
+}
+
+.btn-holder {
+  display: grid;
+}
+
+#img-holder {
+  display: flex;
+}
+
+.upload-btn {
+  font-size: 14px;
+  cursor: pointer;
+  border: 1.6px solid white;
+  background: transparent;
+  padding: 10px 16px;
+  margin-right: 15px;
+  color: white;
+  font-family: 'Montserrat', Courier, monospace;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 15px;
+  width: 110px;
+}
+
+.upload-btn>span {
+  width: 110px;
+
+}
+
+.upload-btn>input[type="file"] {
+  display: none;
+
+}
+
+input {
+  color: white;
+}
+
+/* Animation  */
+
+.box {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(#3a86ff, transparent, transparent, transparent, transparent);
+  position: relative;
+  display: grid;
+  place-items: center;
+  animation: loader 0.7s linear infinite;
+}
+
+.box::before,
+.box::after {
+  content: '';
+  position: absolute;
+}
+
+.box::before {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: #232c60;
+}
+
+.box::after {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  background: #3a86ff;
+  border-radius: 50%;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0);
+    background: conic-gradient(#3a86ff, transparent, transparent, transparent, transparent);
+  }
+
+  25% {
+    background: conic-gradient(#ffba00, transparent, transparent, transparent);
+  }
+
+  50% {
+    background: conic-gradient(#c9184a, transparent, transparent);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+    background: conic-gradient(#480ca8, transparent, transparent);
+  }
+}
